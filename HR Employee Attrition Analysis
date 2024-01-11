@@ -1,1 +1,25 @@
 # HR Employee Attrition Analysis
+
+CREATE DATABASE HREmployee;
+USE HREmployee;
+CREATE TABLE Employee(EmployeeNo int,
+                      Statu CHAR(9),
+                      Age int,
+                      BusinessTravel CHAR(20),
+                      Departement CHAR(35),
+                      Education CHAR(60),
+                      EducationField CHAR(40),
+                      Gender CHAR(7),
+                      JobRole CHAR(60),
+                      JobSatisfaction CHAR(50),
+                      MaritalStatus CHAR(10),
+                      MonthlyIncome int,
+                      NoCompaniesWorked int,
+                      PercentSalaryHike int,
+                      PerformanceRating int,
+                      TotalWorkingYears int,
+                      TrainingTimeLastYear int,
+                      WorkLifeBalance int,
+                      YearsAtCompanies int,
+                      YearsInCurrentRole int,
+                      YearsSinceLastPromotion int);
