@@ -1,4 +1,6 @@
-# HR Employee Attrition Analysis
+# HR Employee Attrition Analysis.
+# The database is created using MySQL.
+# In this SQL, I'm querying a database with one table.
 
 CREATE DATABASE HREmployee;
 USE HREmployee;
@@ -23,3 +25,5 @@ CREATE TABLE Employee(EmployeeNo int,
                       YearsAtCompanies int,
                       YearsInCurrentRole int,
                       YearsSinceLastPromotion int);
+
+# 1470 records of data were inserted into the table using the "Table Data Import Wizard."
