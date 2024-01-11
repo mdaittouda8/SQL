@@ -27,3 +27,35 @@ CREATE TABLE Employee(EmployeeNo int,
                       YearsSinceLastPromotion int);
 
 # 1470 records of data were inserted into the table using the "Table Data Import Wizard."
+
+#Count the number of employees:
+SELECT * FROM Employee;
+SELECT count(EmployeeNo) AS TotalEmployees
+FROM Employee;
+
+#Count of employees in each department:
+SELECT Departement, COUNT(EmployeeNo) AS EmployeeCount
+FROM Employee
+GROUP BY Departement;
+
+#Total monthly income for each gender:
+SELECT Gender, SUM(MonthlyIncome) AS TotalIncome
+FROM Employee
+GROUP BY Gender;
+
+#List employees with the highest monthly income:
+SELECT *
+FROM Employee
+ORDER BY MonthlyIncome DESC
+LIMIT 5;
+
+#Calculate the employee turnover rate:
+SELECT MaritalStatus, COUNT(EmployeeNo) AS TotalEmployees, AVG(1.0 * YearsInCurrentRole) AS AvgYearsInCurrentRole
+FROM Employee
+GROUP BY MaritalStatus;
+
+#Identify departments with low work-life balance:
+SELECT Departement, AVG(WorkLifeBalance) AS AvgWorkLifeBalance
+FROM Employee
+GROUP BY Departement
+HAVING AVG(WorkLifeBalance) < 3;
