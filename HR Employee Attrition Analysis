@@ -59,3 +59,9 @@ SELECT Departement, AVG(WorkLifeBalance) AS AvgWorkLifeBalance
 FROM Employee
 GROUP BY Departement
 HAVING AVG(WorkLifeBalance) < 3;
+
+#Determine the number of current and former employees:
+SELECT Statu, COUNT(Statu) AS EmployeePerS
+FROM Employee
+GROUP BY Statu;
+
